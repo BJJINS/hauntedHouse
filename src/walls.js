@@ -17,6 +17,7 @@ const walls = new THREE.Mesh(
 );
 walls.geometry.setAttribute("uv2", new THREE.Float32BufferAttribute(walls.geometry.attributes.uv.array, 2));
 walls.position.y += 1.25;
+walls.castShadow = true;
 
 
 export default walls;

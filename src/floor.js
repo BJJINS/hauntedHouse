@@ -31,6 +31,7 @@ const floor = new THREE.Mesh(
         roughnessMap: roughness
     })
 );
+floor.receiveShadow = true;
 floor.geometry.setAttribute("uv2", new THREE.Float32BufferAttribute(floor.geometry.attributes.uv.array, 2));
 floor.rotateX(-Math.PI / 2);
 

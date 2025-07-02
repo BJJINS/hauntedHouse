@@ -24,19 +24,20 @@ window.addEventListener("dblclick", () => {
 const width = window.innerWidth;
 const height = window.innerHeight;
 const camera = new THREE.PerspectiveCamera(50, width / height);
-
-camera.position.set(0, 3, 7);
+camera.position.set(0, 5.3, 12.3);
 
 const scene = new THREE.Scene();
 
 const FOG_COLOR = "#262837";
-const fog = new THREE.Fog(FOG_COLOR, 0.5, 15);
+const fog = new THREE.Fog(FOG_COLOR, 1, 15);
 scene.fog = fog;
 
 const renderer = new THREE.WebGLRenderer({
     canvas,
     antialias: true,
 });
+renderer.shadowMap.enabled = true;
+renderer.shadowMap.type = THREE.PCFSoftShadowMap;
 renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
 renderer.setSize(width, height);
 renderer.setClearColor(FOG_COLOR);
@@ -48,7 +49,15 @@ window.onresize = function () {
     camera.updateProjectionMatrix();
 };
 
-new OrbitControls(camera, canvas);
+const controls = new OrbitControls(camera, canvas);
+controls.addEventListener("change", () => {
+    console.log('object :>> ', camera.rotation);
+});
+controls.maxDistance = 16;
+controls.minDistance = 7;
+controls.maxPolarAngle = Math.PI / 2 - Math.PI / 15;
+
+
 
 export {
     camera,
