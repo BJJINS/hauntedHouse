@@ -2,12 +2,12 @@ import * as THREE from "three";
 import { textureLoader } from "./loader";
 const doorColorTexture = textureLoader.load("/textures/door/color.webp");
 doorColorTexture.colorSpace = THREE.SRGBColorSpace;
-const doorAlphaTexture = textureLoader.load("/textures/door/alpha.jpg");
-const doorAmbientOcclusionTexture = textureLoader.load("/textures/door/ambientOcclusion.jpg");
-const doorHeightTexture = textureLoader.load("/textures/door/height.jpg");
-const doorMetalnessTexture = textureLoader.load("/textures/door/metalness.jpg");
-const doorRoughnessTexture = textureLoader.load("/textures/door/roughness.jpg");
-const doorNormalTexture = textureLoader.load("/textures/door/normal.jpg");
+const doorAlphaTexture = textureLoader.load("/textures/door/alpha.webp");
+const doorAmbientOcclusionTexture = textureLoader.load("/textures/door/ambientOcclusion.webp");
+const doorHeightTexture = textureLoader.load("/textures/door/height.webp");
+const doorMetalnessTexture = textureLoader.load("/textures/door/metalness.webp");
+const doorRoughnessTexture = textureLoader.load("/textures/door/roughness.webp");
+const doorNormalTexture = textureLoader.load("/textures/door/normal.webp");
 
 
 const door = new THREE.Mesh(

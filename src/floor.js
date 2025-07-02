@@ -2,10 +2,10 @@ import * as THREE from "three";
 import { textureLoader } from "./loader";
 
 
-const color = textureLoader.load("/textures/grass/color.jpg");
-const normal = textureLoader.load("/textures/grass/normal.jpg");
-const roughness = textureLoader.load("/textures/grass/roughness.jpg");
-const ambientOcclusion = textureLoader.load("/textures/grass/ambientOcclusion.jpg");
+const color = textureLoader.load("/textures/grass/color.webp");
+const normal = textureLoader.load("/textures/grass/normal.webp");
+const roughness = textureLoader.load("/textures/grass/roughness.webp");
+const ambientOcclusion = textureLoader.load("/textures/grass/ambientOcclusion.webp");
 
 color.repeat.set(8, 8);
 normal.repeat.set(8, 8);
