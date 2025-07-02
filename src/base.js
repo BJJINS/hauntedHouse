@@ -50,9 +50,7 @@ window.onresize = function () {
 };
 
 const controls = new OrbitControls(camera, canvas);
-controls.addEventListener("change", () => {
-    console.log('object :>> ', camera.rotation);
-});
+controls.enableDamping = true;
 controls.maxDistance = 16;
 controls.minDistance = 7;
 controls.maxPolarAngle = Math.PI / 2 - Math.PI / 15;
@@ -62,5 +60,6 @@ controls.maxPolarAngle = Math.PI / 2 - Math.PI / 15;
 export {
     camera,
     scene,
-    renderer
+    renderer,
+    controls
 };
