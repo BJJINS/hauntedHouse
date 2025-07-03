@@ -51,7 +51,7 @@ window.onresize = function () {
 
 const controls = new OrbitControls(camera, canvas);
 controls.enableDamping = true;
-controls.maxDistance = 16;
+controls.maxDistance = 13;
 controls.minDistance = 7;
 controls.maxPolarAngle = Math.PI / 2 - Math.PI / 15;
 
